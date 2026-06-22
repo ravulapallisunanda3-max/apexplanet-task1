@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =============================================
+       META & PAGE SETUP
+       Sets character encoding, responsive viewport,
+       and page title shown in the browser tab.
+  ============================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Web Dev Journey | ApexPlanet Internship – Task 1</title>
+
+  <!-- Google Fonts: Syne (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVIGATION BAR
+       Fixed top bar with logo and nav links.
+  ============================================= -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">&#60;DevJourney/&#62;</span>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact" class="nav-cta">Say Hello</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================================
+       HERO SECTION
+       Main welcome heading, sub-text, and CTA button.
+  ============================================= -->
+  <section class="hero" id="home">
+    <!-- Decorative floating code blobs (CSS-only) -->
+    <span class="blob blob-1" aria-hidden="true">&lt;html&gt;</span>
+    <span class="blob blob-2" aria-hidden="true">.css {}</span>
+    <span class="blob blob-3" aria-hidden="true">JS()</span>
+
+    <div class="hero-content">
+      <!-- Main heading with gradient text -->
+      <h1 class="hero-heading">
+        Welcome to My<br />
+        <span class="accent-text">Web Dev</span> Journey
+      </h1>
+
+      <!-- Introduction paragraph -->
+      <p class="hero-intro">
+        Hi! I'm a passionate beginner exploring the world of front-end development
+        through this 45-day internship program. This page showcases the fundamentals
+        of HTML structure, CSS styling, and JavaScript interactivity — the three
+        pillars every great web experience is built on.
+      </p>
+
+      <!-- JavaScript alert button -->
+      <div class="hero-actions">
+        <button class="btn-primary" id="greetBtn" onclick="showGreeting()">
+          Click to Say Hello 👋
+        </button>
+        <!-- Hyperlink requirement -->
+        <a
+          href="https://developer.mozilla.org/en-US/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline"
+        >
+          Explore MDN Docs ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero image — SVG illustration (no external image needed) -->
+    <div class="hero-visual" aria-label="Illustration of a developer at work">
+      <img
+        src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&q=80"
+        alt="A developer writing code on a laptop, surrounded by colourful interface elements"
+        class="hero-img"
+        loading="lazy"
+      />
+      <!-- Floating badge overlaid on image -->
+      <div class="img-badge">
+        <span class="badge-icon">⚡</span>
+        <span>HTML &bull; CSS &bull; JS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ABOUT SECTION
+       Brief introduction cards.
+  ============================================= -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-label">About This Page</p>
+      <h2 class="section-heading">What You'll Find Here</h2>
+      <p class="section-sub">
+        This is my very first structured web project — built to demonstrate core
+        web development concepts in a clean, modern, and fully responsive layout.
+      </p>
+
+      <!-- Feature cards -->
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <h3>HTML Structure</h3>
+          <p>
+            Semantic markup using headings, paragraphs, sections, images,
+            and hyperlinks — the skeleton of every webpage.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3>CSS Styling</h3>
+          <p>
+            Custom properties, flexbox, grid, hover effects, and media
+            queries make this page beautiful across every screen size.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h3>JavaScript Magic</h3>
+          <p>
+            Interactive alert dialogs and DOM manipulation bring the page
+            to life — a taste of the dynamic web.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SKILLS SECTION
+       Visual skill-level bars.
+  ============================================= -->
+  <section class="skills" id="skills">
+    <div class="section-inner skills-inner">
+
+      <div class="skills-text">
+        <p class="section-label">Progress Tracker</p>
+        <h2 class="section-heading">Skills Being Built</h2>
+        <p class="section-sub">
+          Every expert was once a beginner. Here's where I stand
+          45 days into this learning journey.
+        </p>
+        <a href="#contact" class="btn-primary inline-btn">Get In Touch</a>
+      </div>
+
+      <!-- Skill bars -->
+      <div class="skills-bars">
+
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span>HTML5</span><span>80%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--pct: 80%; --color: #f97316;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span>CSS3</span><span>70%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--pct: 70%; --color: #6366f1;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span>JavaScript</span><span>55%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--pct: 55%; --color: #eab308;"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span>Responsive Design</span><span>65%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--pct: 65%; --color: #22c55e;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       RESOURCES SECTION
+       Hyperlinks to useful learning resources.
+  ============================================= -->
+  <section class="resources" id="resources">
+    <div class="section-inner">
+      <p class="section-label">Useful Links</p>
+      <h2 class="section-heading">Learning Resources</h2>
+
+      <div class="resources-grid">
+
+        <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener" class="resource-card">
+          <span class="res-icon">📚</span>
+          <div>
+            <strong>MDN Web Docs</strong>
+            <p>The definitive reference for HTML, CSS & JavaScript.</p>
+          </div>
+          <span class="res-arrow">↗</span>
+        </a>
+
+        <a href="https://www.w3schools.com/" target="_blank" rel="noopener" class="resource-card">
+          <span class="res-icon">🎓</span>
+          <div>
+            <strong>W3Schools</strong>
+            <p>Beginner-friendly tutorials with live code editors.</p>
+          </div>
+          <span class="res-arrow">↗</span>
+        </a>
+
+        <a href="https://css-tricks.com/" target="_blank" rel="noopener" class="resource-card">
+          <span class="res-icon">✨</span>
+          <div>
+            <strong>CSS-Tricks</strong>
+            <p>In-depth guides on modern CSS techniques and layout.</p>
+          </div>
+          <span class="res-arrow">↗</span>
+        </a>
+
+        <a href="https://javascript.info/" target="_blank" rel="noopener" class="resource-card">
+          <span class="res-icon">⚡</span>
+          <div>
+            <strong>JavaScript.info</strong>
+            <p>The most thorough modern JavaScript tutorial online.</p>
+          </div>
+          <span class="res-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTACT / FOOTER SECTION
+  ============================================= -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <span class="nav-logo">&#60;DevJourney/&#62;</span>
+      <p>
+        Built with ❤️ for the
+        <a href="https://apexplanet.in" target="_blank" rel="noopener">ApexPlanet</a>
+        45-Day Web Dev Internship &mdash; Task 1.
+      </p>
+      <p class="footer-small">&copy; 2024 &mdash; HTML &bull; CSS &bull; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
